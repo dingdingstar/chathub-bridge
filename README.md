@@ -1,21 +1,21 @@
-# Claude Bridge
+# ChatHub Code Bridge
 
 > 在**手机 / 网页**上远程发起并续聊 Claude Code 编程任务，在你自己的电脑上执行 —— 实时同步执行进度、工具详情、权限审批与问答回答，无需复制粘贴。
 
-本仓库托管 **Claude Bridge** 桌面端（macOS / Windows）的发布包与自动更新元数据。
+本仓库托管 **ChatHub Code Bridge** 桌面端（macOS / Windows）的发布包与自动更新元数据。
 
 ---
 
 ## 它是什么
 
 ```
-ChatHub (手机/网页)  --①发指令 / 续聊-->  Claude Bridge (本机中转·托盘)  -->  你的电脑 (Claude CLI 执行)
+ChatHub (手机/网页)  --①发指令 / 续聊-->  ChatHub Code Bridge (本机中转·托盘)  -->  你的电脑 (Claude CLI 执行)
        ^                                                                          |
        +----------------②实时回传 进度 / 工具详情 / 权限请求 / 会话全文----------------+
 ```
 
 - **ChatHub**：你在手机或网页里给 Agent 发编程指令、确认权限、看进度，并能**监看与续聊本机上跑过的所有 Claude Code 会话**。
-- **Claude Bridge**：常驻系统托盘的中转 App，把指令转给本机的 Claude Code CLI 执行，并把进度 / 工具调用 / 权限请求 / 会话内容实时回传。
+- **ChatHub Code Bridge**：常驻系统托盘的中转 App，把指令转给本机的 Claude Code CLI 执行，并把进度 / 工具调用 / 权限请求 / 会话内容实时回传。
 - **你的电脑**：真正跑 `claude` 的地方，改动直接落在你本地仓库。
 
 适合：在外用手机指挥家里 / 公司的电脑跑编程任务、远程 code review、随时翻看与接着聊桌面上没聊完的会话、让 Agent 自动改代码并提交。
@@ -66,7 +66,7 @@ ChatHub (手机/网页)  --①发指令 / 续聊-->  Claude Bridge (本机中转
 
 ## 安装与配对
 
-1. 下载并安装对应平台的 Claude Bridge，启动后常驻**系统托盘**（菜单栏）。
+1. 下载并安装对应平台的 ChatHub Code Bridge，启动后常驻**系统托盘**（菜单栏）。
 2. 打开 **ChatHub（手机或网页）→ 设置 → 连接 Claude / 生成配对码**。
 3. 点击配对（或扫码）—— 通过 `claude-bridge://` 唤起本机 App 自动写入配置并连接。
 4. 托盘状态变为「已连接」即配对成功。
@@ -107,7 +107,7 @@ App 启动时及每 6 小时检查一次更新，发现新版自动后台下载�
 | Windows 更新时提示**「无法关闭」** / 看不到其他窗口的关闭按钮 | 旧版自动更新非静默 + 屏幕边缘状态光带遮挡，**更新到最新版本**已改为静默安装并移除光带。 |
 | 配对后任务无反应 | 确认托盘显示「已连接」、目标仓库已在 Bridge 注册、`claude -p` 能正常回话。 |
 | 手机/网页里看不到本机会话，或会话内容不全 | 在托盘点**「重新扫描全部 session」**全量回填；会话全文为按需加载，首次打开稍候即可。 |
-| macOS 提示「已损坏 / 无法打开」 | 未签名应用：右键 →「打开」，或终端 `xattr -dr com.apple.quarantine "/Applications/Claude Bridge.app"`。 |
+| macOS 提示「已损坏 / 无法打开」 | 未签名应用：右键 →「打开」，或终端 `xattr -dr com.apple.quarantine "/Applications/ChatHub Code Bridge.app"`。 |
 
 ---
 
@@ -123,9 +123,9 @@ App 启动时及每 6 小时检查一次更新，发现新版自动后台下载�
 
 ## 相关
 
-- **ChatHub** —— 企业级即时通讯平台（私聊/群聊、平台集成、Agent 助手等），Claude Bridge 是其「远程 Claude Code」能力的本机执行端。
+- **ChatHub** —— 企业级即时通讯平台（私聊/群聊、平台集成、Agent 助手等），ChatHub Code Bridge 是其「远程 Claude Code」能力的本机执行端。
 - 本仓库同时托管 **ChatHub Bridge**（macOS 菜单栏 App，将微信消息同步到 ChatHub）的发布包，见 Releases 中对应 tag。
 
 ---
 
-> 隐私：Claude Bridge 仅在你的设备与 ChatHub 之间中转指令与执行结果，代码改动均发生在你本地仓库。配对令牌仅保存在本机配置中。
+> 隐私：ChatHub Code Bridge 仅在你的设备与 ChatHub 之间中转指令与执行结果，代码改动均发生在你本地仓库。配对令牌仅保存在本机配置中。
